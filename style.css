@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --success: #33ce6c;
+  --error: #e73939;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffb88c 0%, #de6262 100%);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  padding: 1rem;
+}
+
+main {
+  padding: 0 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.status {
+  display: none;
+}
+
+.question {
+  font-size: 18px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  box-shadow: 0 8px 24px #0000001e;
+  padding: 1rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+}
+
+.card:hover {
+  transform: scale(105%);
+}
+
+.card > p {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.card-check {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 1rem;
+  background-color: black;
+  box-shadow: 0 8px 24px #0000001e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-check > img {
+  width: 20px;
+  height: 20px;
+}
+
+.card-success {
+  background-color: var(--success);
+}
+
+.card-error {
+  background-color: var(--error);
+}
+
+button {
+  padding: 0.4rem 1rem;
+  background: none;
+  border: solid 2px black;
+  border-radius: 2rem;
+  font-size: 18px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+}
+
+button:hover {
+  transform: scale(105%);
+}
